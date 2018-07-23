@@ -1,0 +1,5 @@
+services:
+  twig_entity_load.twig_extension:
+    class: Drupal\twig_entity_load\TwigEntityLoadExtension
+    tags:
+      - { name: twig.extension }

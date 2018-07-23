@@ -1,0 +1,27 @@
+<?php
+
+/**
+ * @file
+ * Contains twig_entity_load.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function twig_entity_load_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the twig_entity_load module.
+    case 'help.page.twig_entity_load':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('This module allows loading different kind of entities on the twigs templates, you can also specify how to receive the entity as a rendered entity or as an object.') . '</p>';
+      $output .= '<p>' . t('Twig functions:') . '</p>';
+      $output .= '<p>' . t('load_entity($entity_type, $id = NULL, $view_mode = NULL, $render = NULL)') . '</p>';
+      $output .= '<p>' . t('load_entity_field($entity_type, $id = NULL, $field_name = NULL, $render = NULL) ') . '</p>';
+      return $output;
+
+    default:
+  }
+}

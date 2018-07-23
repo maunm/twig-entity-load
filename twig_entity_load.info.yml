@@ -1,0 +1,5 @@
+name: Twig Entity Load
+type: module
+description: This module allows loading different kind of entities on the twigs templates, you can also specify how to receive the entity as a rendered entity or as an object.
+core: 8.x
+package: other
